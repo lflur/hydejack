@@ -13,7 +13,7 @@
 Copyright (c) 2017 Florian Klampfer
 Licensed under MIT
 Powered by Hydejack (https://qwtel.com/hydejack/)
-Version: 6.0.0-rc3
+Version: 6.0.0
 -->
 
 
@@ -36,22 +36,20 @@ Version: 6.0.0-rc3
 
 
 
-  <title>v6: JavaScripten &middot; Hydejack</title>
+  <title>Installation &middot; Hydejack</title>
 
 
 
-<meta name="description" content="The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers. This release addresses this by adding a layer of JavaScript, effectively turning the whole site into a single page app.
+<meta name="description" content="A pretentious two-column Jekyll theme, stolen by @qwtel from Hyde. You could say it was.. hydejacked.
 ">
 
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="https://qwtel.com/hydejack/2017/04/15/javascripten/" />
+<link rel="canonical" href="https://qwtel.com/hydejack/docs/6.0.0/installation/" />
 
 <link rel="alternate" type="application/atom+xml" title="Hydejack Feed" href="https://qwtel.com/hydejack/feed.xml">
 
-
-  <link rel="prev" href="https://qwtel.com/hydejack/2016/09/17/the-fast-one/">
 
 
 
@@ -85,17 +83,17 @@ Version: 6.0.0-rc3
 </style>
 
 
-<link rel="preload" href="/hydejack/assets/css/hydejack.css?v=6.0.0-rc3" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="/hydejack/assets/css/hydejack.css?v=6.0.0" as="style" onload="this.rel='stylesheet'">
 
 <style id="_pageStyle">
 
-.content a{color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:hover{border-color:#A85641}:focus{outline-color:#A85641}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
+.content a{color:#8e5c75;border-color:rgba(142,92,117,0.2)}.content a:hover{border-color:#8e5c75}:focus{outline-color:#8e5c75}::selection{color:#fff;background:#8e5c75}::-moz-selection{color:#fff;background:#8e5c75}
 
 </style>
 
 
 <noscript>
-  <link rel="stylesheet" href="/hydejack/assets/css/hydejack.css?v=6.0.0-rc3">
+  <link rel="stylesheet" href="/hydejack/assets/css/hydejack.css?v=6.0.0">
 
   
   
@@ -135,282 +133,145 @@ Version: 6.0.0-rc3
 <!-- CONTENT         -->
 <!-- =============== -->
 <div id="_yPushState">
-  <main id="_main" class="content" role="main" data-color="#A85641" data-image="/hydejack/assets/img/nap.jpg">
-    
-
-<article id="post-2017/04/15/javascripten" class="post dingbat" role="article">
-  <header>
-    <h1 class="post-title">
-      
-        v6: JavaScripten
-      
-    </h1>
-
-    
-
-    
-
-    <p class="post-date heading">
-      <time datetime="2017-04-15T00:00:00+02:00">15 Apr 2017</time>, 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-    
-      
-      
-
-
-
-
-
-
-
-
-
-on <a href="/hydejack/tag/hydejack/" data-flip="title">Hydejack</a>
-
-    
-    </p>
-  </header>
-
+  <main id="_main" class="content" role="main" data-color="#8e5c75" data-image="/hydejack/assets/img/doc.jpg">
+    <article class="page" role="article">
+  <h1 class="page-title">Installation</h1>
   
-  
-  
-<p class="message">The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers. This release addresses this by adding a layer of JavaScript, effectively turning the whole site into a single page app.</p>
 
+  <hr/>
 
+  <p>There are multiple ways of installing Hydejack.
+The easiest is <a href="#via-gem">via the Ruby gem</a>.
+If you bought the “PRO” version of Hydejack or downloaded the zip, you’ll want to install <a href="#via-zip">via the zip file</a>.
+If you know what you are doing, you can <a href="#via-git">fork or clone the git repository</a>.</p>
 
-<hr/>
-
-
-  
-    <p>Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.</p>
-
-<h2 id="major">Major</h2>
-<p>Pages are now loaded and swapped through JavaScript. This has a number of effects. First of all, it looks cool, but the animations aren’t just about aesthetics: They also help to hide the network time of fetching the next page, making the entire site feel faster. At the same time, the <abbr title="Flash of Unstyled Content">FOUC</abbr> introduced in the last release will no longer occur (except on the initial page load).</p>
-
-<ul>
-  <li>Most JS is now unified in the <code class="highlighter-rouge">_js</code> directory and written in ES2016.</li>
-  <li>The <code class="highlighter-rouge">blog-by-tag</code> layout has been renamed to <code class="highlighter-rouge">list</code>.</li>
-  <li><code class="highlighter-rouge">public</code> folder has been renamed to <code class="highlighter-rouge">assets</code> to make the theme compatible with Jekyll’s gem-based themes.</li>
-  <li>Tags are now supported via Jekyll Collections instead of <code class="highlighter-rouge">_data</code>.</li>
-  <li>The sidebar can now add links to all kinds of pages.</li>
-  <li>Categories are now supported.</li>
-  <li>Author information moved to <code class="highlighter-rouge">_data/authors.yml</code></li>
-  <li>Added support for multiple authors.</li>
-  <li>Using <code class="highlighter-rouge">jekyll-feed</code> plugin (supported on GitHub Pages) instead of custom solution.</li>
-  <li>Added <code class="highlighter-rouge">about</code> layout.</li>
-  <li>Added <code class="highlighter-rouge">not-found</code> layout.</li>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#via-gem" id="markdown-toc-via-gem">Via gem</a></li>
+  <li><a href="#via-zip" id="markdown-toc-via-zip">Via zip</a>    <ul>
+      <li><a href="#without-bundler" id="markdown-toc-without-bundler">Without Bundler</a></li>
+    </ul>
+  </li>
+  <li><a href="#via-git" id="markdown-toc-via-git">Via git</a></li>
 </ul>
 
-<p>See the <a href="/hydejack/docs/6.0.0-rc3/migration/">the migration guide</a> for instructions on how to upgrade.</p>
+<h2 id="via-gem">Via gem</h2>
+<p>Installation via the gem-based theme has the advantage of not cluttering your blog repository, so it is especially recommended for beginners.</p>
 
-<h2 id="minor">Minor</h2>
+<p>If you haven’t already, create a new Jekyll site first:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll new &lt;PATH&gt;
+</code></pre>
+</div>
+
+<p>Your blog directory should look something like this</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>├── _posts
+│   └── 2017-04-07-welcome-to-jekyll.markdown
+├── _config.yml
+├── about.md
+├── Gemfile
+├── Gemfile.lock
+└── index.md
+</code></pre>
+</div>
+
+<p>Next, you’ll want to add <code class="highlighter-rouge">jekyll-theme-hydejack</code> as a dependency by adding the following line to the <code class="highlighter-rouge">Gemfile</code>.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-theme-hydejack"</span>
+</code></pre>
+</div>
+
+<p>Now you want to edit the <code class="highlighter-rouge">_config.yml</code> of your Jekyll site and set Hydejack as the theme.
+Look for the <code class="highlighter-rouge">theme</code> key (or add it when missing) and set its value to <code class="highlighter-rouge">jekyll-theme-hydejack</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>theme: jekyll-theme-hydejack
+</code></pre>
+</div>
+
+<p>The dependencies will be fetched from <a href="https://rubygems.org/">RubyGems</a> when running Jekyll via <a href="http://bundler.io/">Bundler</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle exec jekyll serve
+</code></pre>
+</div>
+
+<p>You can now point your browser to <a href="http://localhost:4000">http://localhost:4000</a> and see Hydejack in action.</p>
+
+<p class="message"><strong>NOTE</strong>: If you are missing the <code class="highlighter-rouge">bundle</code> command, you can install Bundler by running <code class="highlighter-rouge">gem install bundler</code>.</p>
+
+<p>For more information on gem-based themes, see the <a href="http://jekyllrb.com/docs/themes/">Jekyll Documentation</a>.</p>
+
+<h2 id="via-zip">Via zip</h2>
+<p>If you downloaded the zip, the folder structure will look like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>├── _data
+├── _featured_categories
+├── _featured_tags
+├── _includes
+│   ├── scripts
+│   └── styles
+├── _js
+│   ├── lib
+│   └── src
+│       └── flip
+├── _layouts
+├── _posts
+├── _sass
+│   ├── hydejack
+│   └── pooleparty
+├── assets
+│   ├── css
+│   ├── icomoon
+│   ├── img
+│   └── js
+├── docs
+│   └── 6.0.0
+├── _config.yml
+├── 404.md
+├── about.md
+├── index.html
+└── posts.md
+</code></pre>
+</div>
+
+<p>The dependencies will be fetched from <a href="https://rubygems.org/">RubyGems</a> when running Jekyll via <a href="http://bundler.io/">Bundler</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle exec jekyll serve
+</code></pre>
+</div>
+
+<p>You can now point your browser to <a href="http://localhost:4000">http://localhost:4000</a> and see Hydejack in action.</p>
+
+<p class="message"><strong>NOTE</strong>: If you are missing the <code class="highlighter-rouge">bundle</code> command, you can install Bundler by running <code class="highlighter-rouge">gem install bundler</code>.</p>
+
+<h3 id="without-bundler">Without Bundler</h3>
+<p>If you do not want to use Bundler, you can install the dependencies yourself via <code class="highlighter-rouge">gem install &lt;dep&gt;</code>. They are</p>
 
 <ul>
-  <li>The “accent” font (heading font) is now used for all headings. This gives the theme a “bolder” look and was necessary for the animation: link =&gt; heading.</li>
-  <li>Changed default text font from “PT Serif” to “Noto Serif”.</li>
-  <li>Added <a href="/hydejack/docs/6.0.0-rc3/writing/">CSS classes</a> for styling markdown content.</li>
-  <li>Links have a new style. They now always display an underline to make the choice of the link color less critical (darker colors were hard to distinguish from regular text).</li>
-  <li>Made social media icons larger and easier to tap.</li>
-  <li>Social media icons are now also part of the “about” sections of a post.</li>
-  <li>Added support for a copyright notice at the bottom. Can be set via the config variable <code class="highlighter-rouge">copyright</code>.</li>
-  <li>Changed responsive breakpoints and added support for very large displays.</li>
-  <li>The site is now printable.</li>
-  <li>The <code class="highlighter-rouge">blog</code> layout now only shows the excerpt instead of the full post.</li>
-  <li>Links to external pages are now marked with a symbol.</li>
+  <li><code class="highlighter-rouge">jekyll</code></li>
+  <li><code class="highlighter-rouge">jekyll-paginate</code></li>
+  <li><code class="highlighter-rouge">jekyll-feed</code></li>
+  <li><code class="highlighter-rouge">jekyll-sitemap</code></li>
 </ul>
 
-<h2 id="fixes">Fixes</h2>
+<h2 id="via-git">Via git</h2>
+<p>If you are familiar with using git, you can add the <a href="https://github.com/qwtel/hydejack">Hydejack repository</a> as a remote, and merge its master branch into your working branch.</p>
 
-<ul>
-  <li>Related posts is no longer blank for posts that do not belong to a category.</li>
-  <li>Footnotes now use the text version of “leftwards arrow with hook” instead of the emoji on iOS.</li>
-  <li>Text is no longer invisible while waiting for Google Fonts to load.</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add hydejack ...
+$ git merge hydejack/master
+</code></pre>
+</div>
+
+<p>You can also update Hydejack this way. The master branch will not contain work in progress, but will contain major (breaking) releases.</p>
+
+<p>If you are starting a new blog you can also fork or clone the repository and use it as basis, though it’s debatable whether that’s desirable.</p>
 
 <hr />
 
-<p><a href="https://github.com/qwtel/hydejack/releases/tag/v6.0.0-rc3">Get <em>JavaScripten</em> on GitHub</a></p>
-
-
-  
+<p class="faded heading">Continue with <a href="/hydejack/docs/6.0.0/configuration/" data-flip="title">Configuration</a> »</p>
 
 </article>
-
-
-
-
-
-  <aside class="author" role="complementary">
-    
-    
-  
-  
-
-  
-
-  <img
-    class="me"
-    alt="Florian Klampfer"
-    src="//qwtel.com/assets/img/me.jpg"
-    srcset="//qwtel.com/assets/img/me.jpg 1x,//qwtel.com/assets/img/me@2x.jpg 2x"
-    sizes=""
-  />
-
-
-
-
-<h2>About</h2>
-<hr/>
-
-<p>Hi, I’m Florian or <a href="https://www.twitter.com/qwtel" rel="me"><code class="highlighter-rouge">@qwtel</code></a>, which isn’t an acronym,
-I just <a href="https://qwtel.com/how-to-find-a-short-username">wanted a short username</a> and that one happened to be available.</p>
-
-<p>I’m the the developer and – to some extent – designer of Hydejack, the Jekyll theme you are currently looking at.</p>
-
-
-    <div class="sidebar-social">
-      <span class="sr-only">Social:</span>
-<ul>
-  
-    
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="https://twitter.com/qwtel">
-    <span class="icon-twitter" title="Twitter"></span>
-    <span class="sr-only">Twitter</span>
-  </a>
-</li>
-
-  
-    
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="https://www.youtube.com/channel/UCu0PYX_kVANdmgIZ4bw6_kA">
-    <span class="icon-youtube" title="YouTube"></span>
-    <span class="sr-only">YouTube</span>
-  </a>
-</li>
-
-  
-    
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="https://github.com/qwtel">
-    <span class="icon-github" title="GitHub"></span>
-    <span class="sr-only">GitHub</span>
-  </a>
-</li>
-
-  
-</ul>
-
-    </div>
-  </aside>
-
-
-
-
-
-<aside class="related" role="complementary">
-  <h2>Related Posts</h2>
-  <hr/>
-
-  <ul class="related-posts">
-    
-      
-      
-      
-        
-          
-          
-        
-        
-          
-
-
-<li class="h4">
-  <a href="/hydejack/2016/09/17/the-fast-one/" data-flip="title">
-    <span>v5: The Fast One</span>
-  </a>
-  <small><time datetime="2016-09-17T00:00:00+02:00">
-    17 Sep 2016
-  </time></small>
-</li>
-
-        
-      
-        
-        
-          
-
-
-<li class="h4">
-  <a href="/hydejack/2016/08/30/social-media-impocalypse/" data-flip="title">
-    <span>v4: Social Media Impocalypse</span>
-  </a>
-  <small><time datetime="2016-08-30T00:00:00+02:00">
-    30 Aug 2016
-  </time></small>
-</li>
-
-        
-      
-        
-        
-          
-
-
-<li class="h4">
-  <a href="/hydejack/2016/03/08/introducing-hydejack/" data-flip="title">
-    <span>Introducing Hydejack</span>
-  </a>
-  <small><time datetime="2016-03-08T00:00:00+01:00">
-    08 Mar 2016
-  </time></small>
-</li>
-
-        
-      
-    
-  </ul>
-</aside>
-
 
 
     
@@ -422,14 +283,14 @@ I just <a href="https://qwtel.com/how-to-find-a-short-username">wanted a short u
 
   
   <p>
-    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.0.0-rc3</span></code>
+    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.0.0</span></code>
   </p>
 </footer>
 
   </main>
   <div id="_yDrawer">
   <div id="_sidebar" class="sidebar">
-    <div class="sidebar-bg" style="background-color:#A85641;background-image:url(/hydejack/assets/img/nap.jpg)"></div>
+    <div class="sidebar-bg" style="background-color:#8e5c75;background-image:url(/hydejack/assets/img/doc.jpg)"></div>
     <header class="sidebar-sticky" role="banner">
       <div class="sidebar-about">
         <h1><a id="_title" href="/hydejack/">Hydejack</a></h1>
@@ -456,7 +317,7 @@ I just <a href="https://qwtel.com/how-to-find-a-short-username">wanted a short u
     </li>
   
     <li>
-      <a class="sidebar-nav-item" href="/hydejack/docs/6.0.0-rc3/">Documentation</a>
+      <a class="sidebar-nav-item" href="/hydejack/docs/6.0.0/">Documentation</a>
     </li>
   
     <li>
@@ -565,7 +426,7 @@ I just <a href="https://qwtel.com/how-to-find-a-short-username">wanted a short u
 
 <!--[if gt IE 9]><!---->
 
-<script>loadJSDeferred('/hydejack/assets/js/hydejack.js?v=6.0.0-rc3');</script>
+<script>loadJSDeferred('/hydejack/assets/js/hydejack.js?v=6.0.0');</script>
 <!--<![endif]-->
 
 
